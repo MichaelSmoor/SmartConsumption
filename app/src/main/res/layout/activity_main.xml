@@ -42,7 +42,8 @@
                             android:id="@+id/IBEen"
                             android:layout_marginTop="100dp"
                             android:src="@drawable/moeder"
-                            android:scaleType="fitXY" />
+                            android:scaleType="fitXY"
+                            android:onClick="PlaatjeV"/>
 
                         <ImageButton
                             android:layout_width="150dp"
@@ -51,7 +52,8 @@
                             android:layout_marginTop="100dp"
                             android:src="@drawable/vader"
                             android:scaleType="fitXY"
-                            android:layout_marginLeft="50dp" />
+                            android:layout_marginLeft="50dp"
+                            android:onClick="PlaatjeM"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -88,20 +90,14 @@
                     android:orientation="vertical"
                     android:weightSum="1">
 
-                    <LinearLayout
-                        android:id="@+id/tabMacroCalculator"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                </LinearLayout>
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tabMacroCalculator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <WebView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/webView"
-                        android:layout_weight="0.29"
-                        android:layout_marginTop="60dp" />
                 </LinearLayout>
 
             </FrameLayout>

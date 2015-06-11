@@ -17,7 +17,7 @@ import java.util.Locale;
  * Created by Michael on 11-6-2015.
  */
 public class Inhoud extends SQLiteOpenHelper {
-    private static final String DATABASE_PATH = "C/Users/Michael/AndroidStudioProjects/Smartconsumption/app/src/main/res/Database/";
+    private static final String DATABASE_PATH = "Smartconsumption/app/src/main/res/Database/";
     private static final String DATABASE_NAME = "SmartConsumptionDatabse.accdb";
     private static final int SCHEMA_VERSION = 1;
 
@@ -39,7 +39,7 @@ public class Inhoud extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-    
+
     public void createDatabase() {
         createDB();
     }

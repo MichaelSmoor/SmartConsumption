@@ -4,7 +4,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 
@@ -12,6 +14,7 @@ public class MainActivity extends ActionBarActivity {
 
     ImageButton ibutEen, ibutTwee;
     TextView loginTxt;
+    static TabHost tabHost;
     private Inhoud dbInhoud = null;
 
     @Override
@@ -22,6 +25,31 @@ public class MainActivity extends ActionBarActivity {
         ibutEen = (ImageButton) findViewById(R.id.IBEen);
         ibutTwee = (ImageButton) findViewById(R.id.IBTwee);
         loginTxt = (TextView) findViewById(R.id.txtLogin);
+        tabHost = (TabHost) findViewById(R.id.tabHost);
+
+        final TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+
+        tabHost.setup();
+
+        TabHost.TabSpec tabSpec = tabHost.newTabSpec("Login");
+        tabSpec.setContent(R.id.tabLogin);
+        tabSpec.setIndicator("Login");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("Home");
+        tabSpec.setContent(R.id.tabHome);
+        tabSpec.setIndicator("Home");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("Inhoud");
+        tabSpec.setContent(R.id.tabInhoud);
+        tabSpec.setIndicator("Inhoud");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("Macro calculator");
+        tabSpec.setContent(R.id.tabMacroCalculator);
+        tabSpec.setIndicator("Macro's");
+        tabHost.addTab(tabSpec);
 
         dbInhoud = new Inhoud(this);
 
@@ -47,5 +75,13 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void PlaatjeV(View v) {
+        tabHost.setCurrentTab(2);
+    }
+
+    public void PlaatjeM(View v) {
+        tabHost.setCurrentTab(2);
     }
 }
