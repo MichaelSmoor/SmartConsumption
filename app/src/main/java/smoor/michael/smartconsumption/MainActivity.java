@@ -12,6 +12,7 @@ public class MainActivity extends ActionBarActivity {
 
     ImageButton ibutEen, ibutTwee;
     TextView loginTxt;
+    private Inhoud dbInhoud = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class MainActivity extends ActionBarActivity {
         ibutEen = (ImageButton) findViewById(R.id.IBEen);
         ibutTwee = (ImageButton) findViewById(R.id.IBTwee);
         loginTxt = (TextView) findViewById(R.id.txtLogin);
+
+        dbInhoud = new Inhoud(this);
+
     }
 
     @Override
