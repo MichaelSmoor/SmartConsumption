@@ -85,26 +85,29 @@
                     android:id="@+id/tabInhoud"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
-                    <!--<WebView
+                    <LinearLayout
+                        android:id="@+id/tabMacroCalculator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <WebView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/wvInhoud"></WebView>-->
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabMacroCalculator"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical">
-
+                        android:id="@+id/webView"
+                        android:layout_weight="0.29"
+                        android:layout_marginTop="60dp" />
                 </LinearLayout>
 
             </FrameLayout>
 
         </LinearLayout>
+
     </TabHost>
 
 </LinearLayout>
