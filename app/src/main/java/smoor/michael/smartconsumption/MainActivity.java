@@ -78,10 +78,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void PlaatjeV(View v) {
-        tabHost.setCurrentTab(2);
+        tabHost.setCurrentTab(1);
     }
 
     public void PlaatjeM(View v) {
-        tabHost.setCurrentTab(2);
+        tabHost.setCurrentTab(1);
     }
 }
