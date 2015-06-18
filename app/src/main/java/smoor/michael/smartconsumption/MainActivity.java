@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -13,7 +16,9 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     ImageButton ibutEen, ibutTwee;
+    Button btnInhoud;
     TextView loginTxt;
+    WebView webData;
     static TabHost tabHost;
     private Inhoud dbInhoud = null;
 
@@ -24,8 +29,12 @@ public class MainActivity extends ActionBarActivity {
 
         ibutEen = (ImageButton) findViewById(R.id.IBEen);
         ibutTwee = (ImageButton) findViewById(R.id.IBTwee);
+        btnInhoud = (Button) findViewById(R.id.btnData);
         loginTxt = (TextView) findViewById(R.id.txtLogin);
         tabHost = (TabHost) findViewById(R.id.tabHost);
+        webData = (WebView) findViewById(R.id.webViewData);
+        webData.setWebViewClient(new WebViewClient());
+
 
         final TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
 
@@ -83,5 +92,10 @@ public class MainActivity extends ActionBarActivity {
 
     public void PlaatjeM(View v) {
         tabHost.setCurrentTab(1);
+    }
+
+    public void ButtonData(View v) {
+        tabHost.setCurrentTab(2);
+        webData.loadUrl("http://tweakers.net/");
     }
 }
