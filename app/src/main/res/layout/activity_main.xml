@@ -113,6 +113,55 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtGeslacht"
+                        android:layout_marginTop="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Geslacht" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtGewicht"
+                        android:layout_gravity="center_horizontal|top"
+                        android:hint="Gewicht (kg)" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtLeeftijd"
+                        android:hint="Leeftijd"
+                        android:layout_gravity="center_horizontal" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtLengte"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Lengte (cm)" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ddActief"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtCalorie"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnBereken"
+                        android:text="Bereken"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="ButtonMacro"/>
+
                 </LinearLayout>
 
             </FrameLayout>
